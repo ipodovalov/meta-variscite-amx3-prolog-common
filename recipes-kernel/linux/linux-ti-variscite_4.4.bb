@@ -75,3 +75,11 @@ KERNEL_GIT_URI = "git://github.com/varigit/VAR-SOM-AMx3-Kernel-4-x.git"
 KERNEL_GIT_PROTOCOL = "git"
 SRC_URI += "${KERNEL_GIT_URI};protocol=${KERNEL_GIT_PROTOCOL};branch=${BRANCH} \
             file://defconfig"
+
+SRC_URI_append_varsomam33c += " \
+    file://var-som-am33c.dts \
+"
+
+do_compile_prepend_varsomam33c () {
+    cp -f ${WORKDIR}/*.dts ${WORKDIR}/*.dtsi ${S}/arch/arm/boot/dts/
+}
