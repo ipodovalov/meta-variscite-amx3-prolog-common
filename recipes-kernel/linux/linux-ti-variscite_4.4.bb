@@ -71,7 +71,14 @@ KERNEL_CONFIG_FRAGMENTS_append_dra7xx = " ${KERNEL_CONFIG_DIR}/dra7_only.cfg"
 
 MULTI_CONFIG_BASE_SUFFIX = ""
 
-KERNEL_GIT_URI = "git://github.com/varigit/VAR-SOM-AMx3-Kernel-4-x.git"
+# This kernel is thesame but only "one depth" clone to save disk space 
+# (about 2G) and download time. 
+KERNEL_GIT_URI = "git://github.com/prologplc/VAR-SOM-AMx3-Kernel-4-x.git"
+BRANCH = "master"
+
+# KERNEL_GIT_URI = "git://github.com/varigit/VAR-SOM-AMx3-Kernel-4-x.git"
+# BRANCH = "var-som-AMx3-sdk-linux-03.01.00"
+
 KERNEL_GIT_PROTOCOL = "git"
 SRC_URI += "${KERNEL_GIT_URI};protocol=${KERNEL_GIT_PROTOCOL};branch=${BRANCH} \
             file://defconfig"
