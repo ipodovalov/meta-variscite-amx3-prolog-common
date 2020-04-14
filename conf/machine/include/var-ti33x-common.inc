@@ -5,7 +5,8 @@ XSERVER += "xf86-input-tslib"
 MACHINE_GUI_CLASS = "smallscreen"
 MACHINE_FEATURES += "touchscreen"
 
-IMAGE_FSTYPES += "ubi tar.gz"
+IMAGE_CLASSES += "image_types_sdrecovery"
+IMAGE_FSTYPES += "ubi tar.gz sdcard-recovery wic"
 
 SERIAL_CONSOLE = "115200;ttyS0"
 
@@ -59,4 +60,16 @@ IMAGE_INSTALL_append = " \
         udev-extraconf \
         iperf \
         iperf3 \
+        am33-recovery-utils \
+        libstdc++ \
+        mtd-utils \
+        mtd-utils-ubifs \
 "
+
+IMAGE_ROOTFS = "${DEPLOY_DIR_IMAGE}/rootfs"
+
+# SDCARD parameters
+WKS_FILE = "sdimage-bootpart.wks"
+IMAGE_BOOT_FILES = "u-boot-sd/*"
+IMAGE_TYPEDEP_wic +=" sdcard-recovery"
+do_image_wic[depends] += " mtools-native:do_populate_sysroot dosfstools-native:do_populate_sysroot "
