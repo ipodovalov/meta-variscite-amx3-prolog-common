@@ -2,7 +2,7 @@ inherit image_types
 
 # The sdcard requires the rootfs filesystem to be built before using
 # it so we must make this dependency explicit.
-IMAGE_TYPEDEP_sdcard-recovery += " tar"
+IMAGE_TYPEDEP_sdcard-recovery += " ubi tar"
 
 IMAGE_DEPENDS_sdcard-recovery = "parted-native:do_populate_sysroot \
                         dosfstools-native:do_populate_sysroot \
