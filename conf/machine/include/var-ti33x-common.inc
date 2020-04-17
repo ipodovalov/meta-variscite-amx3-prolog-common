@@ -36,6 +36,9 @@ UBINIZE_ARGS = "-m 2048 -p 128KiB -s 512 -O 2048"
 
 DISTRO_FEATURES_append = " bluez5"
 
+RDEPENDS_packagegroup-arago-tisdk-addons_remove = " dropbear"
+BBMASK = "oe-core/meta/recipes-core/dropbear"
+
 IMAGE_INSTALL_append = " \
         kernel-modules \
         wlconf \
@@ -64,6 +67,7 @@ IMAGE_INSTALL_append = " \
         libstdc++ \
         mtd-utils \
         mtd-utils-ubifs \
+        openssh \
 "
 
 IMAGE_ROOTFS = "${DEPLOY_DIR_IMAGE}/rootfs"
