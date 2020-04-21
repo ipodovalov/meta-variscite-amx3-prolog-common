@@ -3,6 +3,7 @@
 VIDEO_FILES_remove_varsomam33  = "video_480p video_wqvga"
 VIDEO_FILES_remove_varsomam43  = "video_480p video_wqvga"
 VIDEO_FILES_append_varsomam43  = " video_wvga"
+VIDEO_FILES_remove_varsomam33c  = "video_480p video_wqvga"
 
 do_install_append() {
     rm ${D}${datadir}/ti/video/HistoryOfTI*
