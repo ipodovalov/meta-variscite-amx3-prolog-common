@@ -4,7 +4,7 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
 inherit deploy
 
-COMPATIBLE_MACHINE = "varsomam33c"
+COMPATIBLE_MACHINE = "varsomam33c|varsomam33crt"
 
 
 SRC_URI = " \

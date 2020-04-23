@@ -20,3 +20,10 @@ ARAGO_TEST_remove_varsomam33c ="\
 ARAGO_TI_TEST_remove_varsomam33c = "\
     ltp-ddt \
     "
+ARAGO_TEST_remove_varsomam33crt ="\
+    mtd-utils-ubifs-tests \
+"
+
+ARAGO_TI_TEST_remove_varsomam33crt = "\
+    ltp-ddt \
+    "

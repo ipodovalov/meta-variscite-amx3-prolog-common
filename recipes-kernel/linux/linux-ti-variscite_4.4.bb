@@ -84,10 +84,14 @@ SRC_URI += "${KERNEL_GIT_URI};protocol=${KERNEL_GIT_PROTOCOL};branch=${BRANCH} \
             file://defconfig"
 
 SRC_URI_append_varsomam33c += " \
-    file://var-som-am33c.dts \
+    file://targetdevice.dts \
+"
+
+SRC_URI_append_varsomam33crt += " \
+    file://targetdevice.dts \
     file://patch-4.4.19-rt27.patch \
 "
 
-do_compile_prepend_varsomam33c () {
+do_compile_prepend () {
     cp -f ${WORKDIR}/*.dts ${WORKDIR}/*.dtsi ${S}/arch/arm/boot/dts/
 }
