@@ -16,3 +16,7 @@ SRCREV = "5373e54888828ca2357de15c209a13e1130a9f33"
 
 SPL_BINARY = "MLO"
 SPL_UART_BINARY = "u-boot-spl.bin"
+
+SRC_URI_append_varsomam33cv1 += " \
+    file://patch-u-boot-1g.patch \
+"

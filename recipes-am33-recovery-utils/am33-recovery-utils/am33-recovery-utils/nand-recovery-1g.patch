@@ -1,0 +1,13 @@
+diff --git a/nand-recovery.sh b/nand-recovery.sh
+index 683083e..5981044 100755
+--- a/nand-recovery.sh
++++ b/nand-recovery.sh
+@@ -62,7 +62,7 @@ install_rootfs()
+         fi
+         echo "Installing UBI rootfs ..."
+         flash_erase /dev/mtd9 0 0 > /dev/null
+-        ubiformat /dev/mtd9 -f $MEDIA/$OS/$ROOTFS_IMAGE -s 2048 -O 2048
++        ubiformat /dev/mtd9 -f $MEDIA/$OS/$ROOTFS_IMAGE -s 4096 -O 4096
+ }
+ 
+ usage()
