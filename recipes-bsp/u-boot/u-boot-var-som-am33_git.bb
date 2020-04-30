@@ -20,3 +20,15 @@ SPL_UART_BINARY = "u-boot-spl.bin"
 SRC_URI_append_varsomam33cv1 += " \
     file://patch-u-boot-1g.patch \
 "
+
+SRC_URI_append_varsomam33cv1rt += " \
+    file://patch-u-boot-1g.patch \
+"
+
+SRC_URI_append_varsomam33cv2 += " \
+    file://patch-u-boot-1gv2.patch \
+"
+
+SRC_URI_append_varsomam33cv2rt += " \
+    file://patch-u-boot-1gv2.patch \
+"

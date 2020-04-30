@@ -103,6 +103,17 @@ SRC_URI_append_varsomam33cv1rt += " \
     file://patch-4.4.19-rt27.patch \
 "
 
+SRC_URI_append_varsomam33cv2 += " \
+    file://targetdevice.dts \
+    file://patch-dts-1gv2.patch \
+"
+
+SRC_URI_append_varsomam33cv2rt += " \
+    file://targetdevice.dts \
+    file://patch-dts-1gv2.patch \
+    file://patch-4.4.19-rt27.patch \
+"
+
 do_compile_prepend () {
     cp -f ${WORKDIR}/*.dts ${WORKDIR}/*.dtsi ${S}/arch/arm/boot/dts/
 }

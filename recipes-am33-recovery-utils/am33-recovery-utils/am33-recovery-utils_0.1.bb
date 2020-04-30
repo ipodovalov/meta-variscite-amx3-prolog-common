@@ -4,7 +4,7 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
 inherit deploy
 
-COMPATIBLE_MACHINE = "varsomam33c|varsomam33crt|varsomam33cv1|varsomam33cv1rt"
+COMPATIBLE_MACHINE = "varsomam33c|varsomam33crt|varsomam33cv1|varsomam33cv1rt|varsomam33cv2|varsomam33cv2rt"
 
 
 SRC_URI = " \
@@ -29,4 +29,11 @@ SRC_URI_append_varsomam33cv1rt += " \
     file://nand-recovery-1g.patch;patchdir=${WORKDIR} \
 "
 
+SRC_URI_append_varsomam33cv2 += " \
+    file://nand-recovery-1g.patch;patchdir=${WORKDIR} \
+"
+
+SRC_URI_append_varsomam33cv2rt += " \
+    file://nand-recovery-1g.patch;patchdir=${WORKDIR} \
+"
 addtask deploy after do_install
