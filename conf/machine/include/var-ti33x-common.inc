@@ -68,6 +68,7 @@ IMAGE_INSTALL_append = " \
         mtd-utils \
         mtd-utils-ubifs \
         openssh \
+        haveged \
 "
 
 IMAGE_ROOTFS = "${DEPLOY_DIR_IMAGE}/rootfs"
